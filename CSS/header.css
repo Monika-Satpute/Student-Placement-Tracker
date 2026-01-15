@@ -1,0 +1,41 @@
+#header{
+    height:100px;
+    width:100%;
+    border:2px solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+
+#header>input{
+    height: 40px;
+    width: 25%;
+    border-radius: 20px;
+}
+
+#header>h1{
+    color:white;
+}
+
+#navlinks{
+    height:80px;
+    width:50%;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-around;
+align-items: center;
+}
+#navlinks>a{
+    padding: 10px;
+    font-size: 20px;
+    color:white;
+    background-color: green;
+    border-radius: 30px;
+    text-decoration: none;
+
+}
+
+#navlinks>a:hover{
+    background-color: blue;
+}

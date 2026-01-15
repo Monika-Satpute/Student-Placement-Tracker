@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+</head>
+<body>
+
+<header id="header">
+       <h1>Placement Tracker</h1>
+       <input type="search" >
+       <nav id="navlinks">
+        <a href="index.html">Home</a>
+        <a href="./colleges.html">Colleges</a>
+        <a href="./students.html">Students</a>
+        <a href="./companies.html">Companies</a>
+        <a href="./job-roles.html">Job roles</a>
+       </nav>
+
+       <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to right, #f0f4ff, #e6f7ff);
+        }
+
+        /* FORM CONTAINER */
+        #studentForm {
+            width: 60%;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* FULL WIDTH ELEMENTS */
+        #studentForm button {
+            grid-column: span 2;
+        }
+
+        /* INPUTS & SELECT */
+        #studentForm input,
+        #studentForm select {
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        #studentForm input:focus,
+        #studentForm select:focus {
+            border-color: #0072ff;
+            box-shadow: 0 0 6px rgba(0,114,255,0.4);
+        }
+
+        /* FILE INPUT */
+        #studentForm input[type="file"] {
+            padding: 8px;
+        }
+
+        /* BUTTON */
+        #studentForm button {
+            padding: 14px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #studentForm button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            #studentForm {
+                width: 90%;
+                grid-template-columns: 1fr;
+            }
+
+            #studentForm button {
+                grid-column: span 1;
+            }
+        }
+    </style>
+
+    </header>
+
+    <form id="studentForm">
+        <input type="text" placeholder="Enter Student Name" id="studentName"/>
+        <select id="studentGender">
+            <option>Male</option>
+            <option>Female</option>
+        </select><br><br>
+        <input type="date" id="dob">
+        <input type="file" id="profileimg"><br><br>
+        <input type="text" placeholder="Enter College Id" id="collegeId">
+        <input type="text" placeholder="Enter department" id="department"><br><br>
+
+        <input type="text" placeholder="Enter degree" id="degree">
+        <input type="number" placeholder="Enter graduation year" id="graduation"><br><br>
+        <input type="number" placeholder="Enter graduation cgpa" id="cgpa">
+        <input type="number" placeholder="Enter no of backlogs" id="backlogs"><br><br>
+
+        <input type="text" placeholder="Enter programming languages" id="programming">
+        <input type="text" placeholder="Enter Database" id="database"><br><br>
+
+        <input type="text" placeholder="Enter tools" id="tools">
+        <select id="placementStatus">
+            <option>Placed</option>
+            <option>Not Placed</option>
+        </select>
+
+        <button type="submit">Add Student</button>
+
+        <script src="../JS/addStudent.js"></script>
+    </form>
+</body>
+</html>

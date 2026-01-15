@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colleges</title>
+
+    <link rel="stylesheet" href="../CSS/header.css">
+
+    <style>
+        /* BUTTON SECTION */
+        #college-controls {
+            margin: 30px auto;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #college-controls button {
+            padding: 12px 22px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #college-controls button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        /* COLLEGE CONTAINER */
+        #colleges-container {
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        /* COLLEGE CARD */
+        .college-card {
+            width: 280px;
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+            transition: transform 0.3s;
+        }
+
+        .college-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* ✅ COLLEGE NAME COLOR */
+        .college-name {
+            color: #0072ff;   /* blue */
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .college-info {
+            font-size: 14px;
+            margin: 3px 0;
+            color: #444;
+        }
+
+
+
+        .form-container {
+    width: 420px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+    </style>
+</head>
+
+<body>
+
+<header id="header">
+    <h1>Placement Tracker</h1>
+    <input type="search">
+    <nav id="navlinks">
+        <a href="index.html">Home</a>
+        <a href="./colleges.html">Colleges</a>
+        <a href="./students.html">Students</a>
+        <a href="./companies.html">Companies</a>
+        <a href="./job-roles.html">Job Roles</a>
+    </nav>
+</header>
+
+<!-- BUTTON SECTION
+<section id="college-controls">
+    <button onclick="location.href='addCollege.html'">
+        Add New College
+    </button>
+</section> -->
+
+
+
+<!-- ADD COLLEGE FORM -->
+<section id="college-form-section" style="display:none; text-align:center; margin-bottom:30px;">
+    <h2>Add College</h2>
+
+    <input id="name" placeholder="College Name"><br><br>
+    <input id="type" placeholder="College Type"><br><br>
+    <input id="affiliated" placeholder="Affiliated To"><br><br>
+    <input id="city" placeholder="City"><br><br>
+    <input id="state" placeholder="State"><br><br>
+    <input id="departments" placeholder="Departments (comma separated)"><br><br>
+    <input id="students" type="number" placeholder="Total Students"><br><br>
+    <input id="year" type="number" placeholder="Established Year"><br><br>
+
+    <button id="saveCollege">Save College</button>
+    <p id="collegeMsg"></p>
+</section>
+
+<!-- ADD COLLEGE FORM -->
+<section id="college-form-section" style="display:none;">
+    <div class="form-container">
+        <h2>Add College</h2>
+
+        <input id="name" placeholder="College Name">
+        <input id="type" placeholder="College Type">
+        <input id="affiliated" placeholder="Affiliated To">
+        <input id="city" placeholder="City">
+        <input id="state" placeholder="State">
+        <input id="departments" placeholder="Departments (comma separated)">
+        <input id="students" type="number" placeholder="Total Students">
+        <input id="year" type="number" placeholder="Established Year">
+
+        <button id="saveCollege">Add College</button>
+    </div>
+</section>
+
+
+<!-- COLLEGE CARDS -->
+<section id="colleges-container"></section>
+
+<script src="../JS/api.js"></script>
+<script src="../JS/college.js"></script>
+
+</body>
+</html>

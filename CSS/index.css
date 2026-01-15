@@ -1,0 +1,79 @@
+#main-container {
+    height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #f4f6f9;
+}
+
+/* CARD BASE */
+.card {
+    height: 220px;
+    width: 220px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* BACKGROUND IMAGES */
+#colleges {
+    background-image: url("https://images.unsplash.com/photo-1541339907198-e08756dedf3f");
+}
+
+#students {
+    background-image: url("https://images.unsplash.com/photo-1523240795612-9a054b0db644");
+}
+
+#companies {
+    background-image: url("https://images.unsplash.com/photo-1497366216548-37526070297c");
+}
+
+#jobs {
+    background-image: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+/* TEXT STYLING */
+.overlay h2 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.overlay p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.overlay span {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #00ffcc;
+}
