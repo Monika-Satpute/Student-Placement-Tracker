@@ -1,12 +1,16 @@
-
+console.log("companies.js loaded");
 
 let companiesContainer = document.getElementById("companies-container");
 let allCompanies = [];
 
 // ================= FETCH COMPANIES =================
 let callCompaniesFromApi = async () => {
-    allCompanies = await getCompanies();
-    displayCompanies(allCompanies);
+    try {
+        allCompanies = await getCompanies();
+        displayCompanies(allCompanies);
+    } catch (err) {
+        console.error("Error fetching companies:", err);
+    }
 };
 
 callCompaniesFromApi();
@@ -15,13 +19,15 @@ callCompaniesFromApi();
 let displayCompanies = (companies) => {
     companiesContainer.innerHTML = "";
 
-    companies.forEach((company, index) => {
+    companies.forEach((company) => {
 
-        // SAFE FIELD HANDLING
         let companyName = company.name || company.company_name || "N/A";
-        let companyId = company.company_id || company.companie_id || "N/A";
+        let companyId = company.company_id || "N/A";
         let industry = company.industry || "N/A";
-        let location = company.location || company.City || "N/A";
+
+        let location = company.location
+            ? `${company.location.city}, ${company.location.state}`
+            : "N/A";
 
         companiesContainer.innerHTML += `
             <div class="company-card">

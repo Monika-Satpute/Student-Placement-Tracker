@@ -5,39 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Roles</title>
 
-    <link rel="stylesheet" href="../CSS/header.css">
-    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/index.css">
 
     <style>
-        
-    .job-card {
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        padding: 12px;
-        margin: 10px;
-        width: 250px;
-        display: inline-block;
-        vertical-align: top;
-        box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-        text-align: center; /* center all content inside card */
-    }
+        .job-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 10px;
+            width: 250px;
+            display: inline-block;
+            vertical-align: top;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
 
-    .job-card h3 {
-        margin: 0 0 12px 0; /* top margin 0, bottom margin 12px */
-        color: #333;
-        font-size: 1.2em;
-        font-weight: bold;
-    }
+        .job-card h3 {
+            margin: 0 0 12px 0;
+            color: #333;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
 
-    #main-container h1 {
-    font-size: 2em;
-    color: #333;
-    text-align: center;   /* centers the heading */
-    margin-bottom: 30px;  /* spacing between heading and cards */
-}
-
-
-
+        #main-container h1 {
+            font-size: 2em;
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 
@@ -47,7 +43,7 @@
         <h1>Placement Tracker</h1>
         <input type="search" id="search" placeholder="Search job role...">
         <nav id="navlinks">
-            <a href="../index.html">Home</a>
+            <a href="index.html">Home</a>
             <a href="./colleges.html">Colleges</a>
             <a href="./students.html">Students</a>
             <a href="./companies.html">Companies</a>
@@ -56,16 +52,12 @@
     </header>
 
     <main id="main-container">
-    <!-- Heading above all cards -->
-    <h1 style="text-align: center; margin-bottom: 30px;">Job Roles</h1>
-    
-    <!-- Container for all job cards -->
-    <div id="jobs-container"></div>
-</main>
+        <h1>Job Roles</h1>
+        <div id="jobs-container"></div>
+    </main>
 
-
-    <script src="../JS/api.js"></script>
-    <script src="../JS/job-roles.js"></script>
+    <script src="JS/api.js"></script>
+    <script src="JS/job-roles.js"></script>
 
 </body>
 </html>

@@ -86,7 +86,7 @@ let studentForm =document.getElementById("studentForm");
         placement_status: placementStatus.value
     };
 
-    fetch(`"https://placementstracker-4.onrender.com/api/students/${id}`, {
+    fetch(`https://placementstracker-4.onrender.com/api/students/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(student)

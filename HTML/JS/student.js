@@ -160,7 +160,7 @@ let deleteStudent = async (id) => {
 
 
 let editStudent=(id)=>{
-    window.location.href=`../HTML/editStudent.html?id=${id}`;
+    window.location.href=`editStudent.html?id=${id}`;
 }
 
 
@@ -194,7 +194,7 @@ unplacedStudentsBtn.addEventListener("click", () => {
 
 let addStudentBtn = document.getElementById("addStudent");
 addStudentBtn.addEventListener("click", () => {
-    window.location.href = "../HTML/addStudent.html";
+    window.location.href = "addStudent.html";
 });
 
 

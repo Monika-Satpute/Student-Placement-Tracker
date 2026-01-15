@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colleges</title>
 
-    <link rel="stylesheet" href="../CSS/header.css">
+    <!-- CSS path corrected (no ../ needed) -->
+    <link rel="stylesheet" href="CSS/header.css">
 
     <style>
         /* BUTTON SECTION */
@@ -56,9 +57,8 @@
             transform: scale(1.05);
         }
 
-        /* ✅ COLLEGE NAME COLOR */
         .college-name {
-            color: #0072ff;   /* blue */
+            color: #0072ff;
             font-size: 18px;
             font-weight: bold;
             margin-bottom: 8px;
@@ -70,26 +70,23 @@
             color: #444;
         }
 
-
-
         .form-container {
-    width: 420px;
-    margin: 20px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    text-align: center;
-}
+            width: 420px;
+            margin: 20px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            text-align: center;
+        }
 
-.form-container input {
-    width: 100%;
-    padding: 10px;
-    margin: 6px 0;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
     </style>
 </head>
 
@@ -99,39 +96,14 @@
     <h1>Placement Tracker</h1>
     <input type="search">
     <nav id="navlinks">
+        <!-- cleaned paths -->
         <a href="index.html">Home</a>
-        <a href="./colleges.html">Colleges</a>
-        <a href="./students.html">Students</a>
-        <a href="./companies.html">Companies</a>
-        <a href="./job-roles.html">Job Roles</a>
+        <a href="colleges.html">Colleges</a>
+        <a href="students.html">Students</a>
+        <a href="companies.html">Companies</a>
+        <a href="job-roles.html">Job Roles</a>
     </nav>
 </header>
-
-<!-- BUTTON SECTION
-<section id="college-controls">
-    <button onclick="location.href='addCollege.html'">
-        Add New College
-    </button>
-</section> -->
-
-
-
-<!-- ADD COLLEGE FORM -->
-<section id="college-form-section" style="display:none; text-align:center; margin-bottom:30px;">
-    <h2>Add College</h2>
-
-    <input id="name" placeholder="College Name"><br><br>
-    <input id="type" placeholder="College Type"><br><br>
-    <input id="affiliated" placeholder="Affiliated To"><br><br>
-    <input id="city" placeholder="City"><br><br>
-    <input id="state" placeholder="State"><br><br>
-    <input id="departments" placeholder="Departments (comma separated)"><br><br>
-    <input id="students" type="number" placeholder="Total Students"><br><br>
-    <input id="year" type="number" placeholder="Established Year"><br><br>
-
-    <button id="saveCollege">Save College</button>
-    <p id="collegeMsg"></p>
-</section>
 
 <!-- ADD COLLEGE FORM -->
 <section id="college-form-section" style="display:none;">
@@ -151,12 +123,12 @@
     </div>
 </section>
 
-
 <!-- COLLEGE CARDS -->
 <section id="colleges-container"></section>
 
-<script src="../JS/api.js"></script>
-<script src="../JS/college.js"></script>
+<!-- JS paths corrected -->
+<script src="JS/api.js"></script>
+<script src="JS/college.js"></script>
 
 </body>
 </html>

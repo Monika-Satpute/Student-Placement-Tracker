@@ -5,20 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Companies</title>
 
-    <!-- SAME CSS AS INDEX -->
-    <link rel="stylesheet" href="../CSS/header.css">
-    <link rel="stylesheet" href="../CSS/index.css">
+    <!-- ✅ CSS paths (inside HTML folder) -->
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/index.css">
 
-    <!-- Companies card styling -->
     <style>
-
-        
-    #main-container {
-        margin-top: 120px; /* adjust if header height changes */
-        padding-top: 600px;
-    }
-
-
+        #main-container {
+            margin-top: 750px;
+            padding-top: 20px;
+        }
 
         .company-card {
             border: 1px solid #ccc;
@@ -40,29 +35,27 @@
 
 <body>
 
-    <!-- 🔁 SAME HEADER AS index.html -->
     <header id="header">
         <h1>Placement Tracker</h1>
         <input type="search">
 
+        <!-- ✅ HTML-to-HTML navigation -->
         <nav id="navlinks">
-            <a href="../index.html">Home</a>
-            <a href="./colleges.html">Colleges</a>
-            <a href="./students.html">Students</a>
-            <a href="./companies.html">Companies</a>
-            <a href="./job-roles.html">Job roles</a>
+            <a href="index.html">Home</a>
+            <a href="colleges.html">Colleges</a>
+            <a href="students.html">Students</a>
+            <a href="companies.html">Companies</a>
+            <a href="job-roles.html">Job roles</a>
         </nav>
     </header>
 
-    <!-- PAGE CONTENT -->
     <main id="main-container">
-        
         <div id="companies-container"></div>
     </main>
 
-    <!-- JS FILES -->
-    <script src="../JS/api.js"></script>
-    <script src="../JS/companies.js"></script>
+    <!-- ✅ JS paths -->
+    <script src="JS/api.js"></script>
+    <script src="JS/companies.js"></script>
 
 </body>
 </html>
